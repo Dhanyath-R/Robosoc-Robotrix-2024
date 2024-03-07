@@ -1,0 +1,18 @@
+Path planning algorithm based on predetermined shortest distance:
+1. Continuously adjust the velocities of the robot's joints based on sensor readings to navigate around obstacles.
+
+2. If the left vision sensor detects an obstacle and the right sensor doesn't, the robot turns right.
+
+3. If the right vision sensor detects an obstacle and the left sensor doesn't, the robot turns left.
+
+4. When the middle vision sensor detects that the robot is deviating from the line, the following steps are executed:
+   - If the left sensor doesn't detect the line's end and the right sensor does, the robot turns left.
+   - If the right sensor doesn't detect the line's end and the left sensor does, the robot turns right.
+
+5. If both the left and right vision sensors detect the line's end, control shifts to the locator count variable. It increments when a locator is sensed by the proximity sensor. 
+   - If the locator count is less than or equal to 1, the robot turns right.
+   - If the locator count is greater than 1, the robot turns left.
+
+6. After hitting all four locators, a message is printed indicating that all destinations have been reached, and the robot takes only left turns from this point onwards.
+
+7. As it returns to its initial position, the simulation is stopped.
