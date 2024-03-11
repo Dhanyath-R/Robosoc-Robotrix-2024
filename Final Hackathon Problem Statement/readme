@@ -1,0 +1,6 @@
+Objective
+The goal is to develop an integrated robotic system, combining the agility of a differential drive robot with the precise control of a Stewart platform, to improve the internal logistics of hospitals. This system should ensure the secure and stable transport of delicate items, such as surgical instruments, pharmaceuticals, and biological samples, across various hospital terrains within the fastest time possible.
+
+Approach towards solution:
+1)Proximity sensors used to detect Walls if wall not found move towards that particular direction.
+2)Vision sensor used to Identify the each Locator when the value is approx .207.
